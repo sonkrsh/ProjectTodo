@@ -1,3 +1,10 @@
+# Steps to Set Up Project Environment
+
+1) install node js 
+2) npm install
+3) npm install react-bootstrap bootstrap
+4) npm i firebase
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
