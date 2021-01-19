@@ -1,0 +1,32 @@
+.date{
+    display: flex;
+    justify-content: space-evenly;
+}
+.buttnDate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.taskName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.taskBox{
+    margin-top: 1rem;
+    border-radius: 50px;
+    background-color: gainsboro;
+}
+.btn_block{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 14px
+}
+.taskBox:hover{
+    background: linear-gradient(
+        90deg,
+        rgb(87, 83, 112) -20%,
+        rgb(177, 178, 184) 100%
+      );
+}
