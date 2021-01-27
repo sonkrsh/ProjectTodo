@@ -8,7 +8,7 @@ import './todoModel.css'
 function TodoModel() {
 
     useEffect(() => {
-
+        var x ='sorav umar umar sigh ourav kumr sngh souv kumar singh sourav k'
        // Array.from(new Set(x.split(' '))).toString()
         var x ='sorav umar umar sigh ourav kumr sngh souv kumar singh sourav k'
         var arry_Value = x.split(" ")
