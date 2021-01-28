@@ -12,7 +12,6 @@ function TodoForm({ onSubmit }) {
         e.preventDefault()
 
         if (inputValue && inputValue.trim() != '') {
-            //console.log('ee')
             db.collection("todos").add({
                 task: inputValue,
                 time: firebase.firestore.FieldValue.serverTimestamp(),
@@ -33,9 +32,19 @@ function TodoForm({ onSubmit }) {
         <>
             <form onSubmit={handleFormSubmit}>
                 <div className="input-group mb-3">
-                    <input type="text" className="form-control" value={inputValue} onChange={ValueChangeHandler} placeholder="Enter Task Name" />
+                    <input type="text"
+                    className="form-control"
+                    value={inputValue} 
+                    onChange={ValueChangeHandler} 
+                    placeholder="Enter Task Name" 
+                    />
+
                     <div className="input-group-append">
-                        <button className="btn btn-success" type="submit">Add Task</button>
+                        <button 
+                        className="btn btn-success" 
+                        type="submit">
+                        Add Task
+                        </button>
                     </div>
                 </div>
             </form>

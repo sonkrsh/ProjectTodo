@@ -4,9 +4,9 @@ import firebase from 'firebase'
 import './todoTaskList.css'
 import Tasks from './Tasks'
 
-function TodoTaskList({ data,filterData }) {
+function TodoTaskList({ data, filterData }) {
 
-  
+
     const [tasks, settasks] = useState([])
 
     useEffect(() => {
@@ -24,7 +24,7 @@ function TodoTaskList({ data,filterData }) {
     }, [data])
     return (
         <div>
-             <div className="form-group">
+            <div className="form-group">
             </div>
             <div className="allTask">
                 {tasks.filter(name => (name.tasks).includes(filterData)).map((value, key) =>

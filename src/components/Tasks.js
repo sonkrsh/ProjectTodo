@@ -53,10 +53,22 @@ function Tasks({ TaskName, Time, id, status }) {
                     <div className="col-sm-6">
                         <div className="buttnDate" key={id}>
                             <div className="btn_block">
-                                <button onClick={handleEdit} type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" value={id}>Edit
-                  </button>
-                                <button type="button" onClick={handleDelte} value={id} className="btn btn-warning">
-                                    Task completed</button>
+                                <button
+                                    onClick={handleEdit}
+                                    type="button"
+                                    className="btn btn-primary"
+                                    data-toggle="modal"
+                                    data-target="#exampleModalCenter"
+                                    value={id}>
+                                    Edit
+                                </button>
+
+                                <button type="button"
+                                    onClick={handleDelte}
+                                    value={id}
+                                    className="btn btn-warning">
+                                    Task completed
+                                </button>
                             </div>
                             <div className="date">
                                 <p>Status : {status}</p><p>{new Date(Time * 1000).toLocaleTimeString("en-US")}</p>
@@ -65,8 +77,6 @@ function Tasks({ TaskName, Time, id, status }) {
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
             <Modal
@@ -76,18 +86,27 @@ function Tasks({ TaskName, Time, id, status }) {
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-
                     <Modal.Title>Edit Task</Modal.Title>
                 </Modal.Header>
                 <form onSubmit={editHandleChange}>
                     <Modal.Body>
-                        <input type="text" onChange={e => { seteditTaskName(e.target.value) }} class="form-control" value={editTaskName} />
+                        <input
+                            type="text"
+                            onChange={e => { seteditTaskName(e.target.value) }} class="form-control"
+                            value={editTaskName} />
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
+                        <Button
+                            variant="secondary"
+                            onClick={handleClose}>
                             Close
-          </Button>
-                        <Button type="submit" value={editTaskId} variant="primary">Update</Button>
+                        </Button>
+                        <Button
+                            type="submit"
+                            value={editTaskId}
+                            variant="primary">
+                            Update
+                        </Button>
                     </Modal.Footer>
                 </form>
             </Modal>
